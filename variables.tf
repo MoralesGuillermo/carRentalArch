@@ -6,7 +6,7 @@ variable "subscription_id" {
 variable "project" {
     type= string
     description = "The name of the project the resource group belongs to"
-    default = "carRental"
+    default = "carrental"
 }
 
 variable environment {
@@ -29,4 +29,10 @@ variable "tags" {
         date        = "2025-31-10"
         createdBy   = "Terraform"
     }
+}
+
+variable "admin_sql_password" {
+  description = "The administrator password for the SQL server"
+  type        = string
+  sensitive   = true
 }
